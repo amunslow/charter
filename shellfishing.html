@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="icon" href="images/BrhAPfug.png">
+        <title>Shellfishing | Tails Up</title>
+    </head>
+    <style>
+        .img {
+            height: 300px;
+            width: 350px;
+        }
+        .page-heading {
+            background-image:url("images/snails.jpg");
+        }
+        .big-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 3vh;
+            font-weight:bold;
+            font-style:italic;
+            margin-bottom: 5px;
+        }
+        .text {
+            padding-top:5px;
+            font-size:3vh;
+            color: black;
+        }
+        .small-heading {
+            font-size:6vh;
+        }
+        .divider {
+            height: 3px;
+            background-color: #185D7A;
+            margin-bottom:10px;
+        }
+
+    </style>
+    <body>
+        <div class="content">
+            <!--Nav Bar-->
+            <div id="nav-placeholder"></div>
+            <script>$(function(){$("#nav-placeholder").load("nav.html");});</script>
+            <div class="container-fluid text-center page-heading parallax">Shellfishing</div>
+            <div class="container-fluid border"></div>
+
+            <!--<div class="container-fluid page-about">Section for a description...</div>-->
+
+            <div class="container-fluid parallax background">
+                <div class="row" style="padding:5vh;">
+                    <div class="col-sm-6">
+                        <div class="small-heading">Recreational Clamming</div>
+                        <div class="divider"></div>
+                        <div class="big-text">Offered  year round (winter ice may impact December to February)<br>$300 from shore, $450 by boat</div>
+                        <div class="text text-justify">If you love clams or quahogs and want to harvest your own, then this session is for you. We offer shore or boat options depending on your preference. We provide all gear for the trip.</div>
+                        <br>
+                        <div class="text" style="font-style:italic; color:black; font-weight:bold;">What you will learn over a 5 hour session:</div>
+                        <ul class="text-left text" style="list-style:none; font-size:2.5vh">
+                            <li>- State regulations and licensing</li>
+                            <li>- Gear required and where to buy</li>
+                            <li>- Where to go</li>
+                            <li>- Digging and raking technique</li>
+                            <li>- Shellfish care</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img src="images/clamming-2.jpeg" style="padding:5px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="footer-placeholder"></div>
+        <script>$(function(){$("#footer-placeholder").load("footer.html");});</script>
+    </body>
+</html>

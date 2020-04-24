@@ -1,9 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animate.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+        <link rel="icon" href="images/BrhAPfug.png">
+        <title>Tails Up</title>
+        <meta name="Description" content="Tails Up connects you to Narragansett Bay and the surrounding RI Coastline. We offer Charters, Summer Camps, Fishing Lessons, Lobstering and Tours.">
+
+        <style>
+            .heading {
+                /*background-image: linear-gradient(180deg, #185D7A, #2F7A99, #5CA5C3);*/
+                background-image: url("images/ocean-birds.jpeg");
+                background-color: rgb(41, 41, 41);
+                background-blend-mode: screen;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                color: white;
+                font-family:fantasy;
+                height: 70vh;
+                padding-top: 7vh;
+                padding-bottom:0;
+                font-weight: 800;
+                z-index: 1;
+                overflow:hidden;
+            }
+
+            .offerings {
+                background-color:white;
+                font-size: 3vh;
+                padding: 3vh;
+                font-family: Arial, sans-serif;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .slide {
+               background-color: #DFDFDF;
+               /*background-color:white;*/
+                max-height:auto;
+            }
+            .fas {
+                padding: 3vh 0;
+                font-size: 10vh;
+                color: black;
+            }
+            .fa-water {
+                color:white;
+            }
+            .service-container {
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+            }
+            .service-border-left {
+                border-left: 1px solid #D08E3B;
+            }
+            .service-border-right {
+                border-right: 1px solid #D08E3B;
+            }
+            .service-text {
+                font-weight: bold;
+                font-size: 4vh;
+                font-family:fantasy;
+            }
+            .blurb {
+                color: black;
+                height: 11vh;
+                font-size:13px;
+            }
+            .learnmore {
+                font-weight: bold;
+                color: red;
+                font-size:13px;
+            }
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 100%;
+                margin: 0;
+            }
+            .pictures {
+                background-image: url("images/plank2.jpg");
+                background-repeat: no-repeat;
+                background-color: rgb(172, 170, 170);
+                background-blend-mode: screen;
+                background-size: 100% 100%;
+                padding:4vh;
+                
+            }
+            .btm-motto {
+                background-image: linear-gradient(180deg, #D08E3B, #E2AF6E, #F6D0A0);
+                padding-top: 3vh;
+                padding-bottom: 2vh;
+                color: black;
+                font-weight: bold;
+                font-size: 3vh;
+                font-family:fantasy;
+            }
+            .border {
+                height: 4px; 
+                background-color: #D08E3B;
+            }
+            .img-grid {
+                box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08);
+            }
+            @media (max-width:786px) {
+                div.head-text {
+                    font-size: 6vh;
+                }
+                i.fa-water {
+                    font-size: 6vh;
+                }
+                div.head-small-text {
+                    font-size: 2vh;
+                } 
+            }
+            
+            @media (min-width: 787px) and (max-width: 1200px) {
+                div.head-text {
+                    font-size: 8vh;
+                }
+                i.fa-water {
+                    font-size: 8vh;
+                }
+                div.head-small-text {
+                    font-size: 2.5vh;
+                }   
+            }
+            @media (min-width: 1201px) and (max-width: 1350px) {
+                div.head-text {
+                    font-size: 10vh;
+                }   
+                i.fa-water {
+                    font-size: 10vh;
+                }
+                div.head-small-text {
+                    font-size: 3vh;
+                } 
+            }
+            @media (min-width:1351px) {
+                div.head-text {
+                    font-size: 12vh;
+                }   
+                i.fa-water {
+                    font-size: 12vh;
+                }
+                div.head-small-text {
+                    font-size: 3.5vh;
+                }
+            }
+            .boat1 {
+                width:100%;
+                height:auto;
+                padding:5px;
+                box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08);
+            }
+            .btn {
+                background-color:#D08E3B;
+                border:none;
+                font-size:3vh;
+                font-family: fantasy;
+                color:black;
+                cursor: pointer;
+                padding:10px;
+            }
+            .btn:hover {
+                background-color:#D08E3B;
+                color:black;
+            }
+            
+            .pad {
+                padding:20px;
+            }
+            .vertical {
+                height:100%;
+                width: 100%;
+            }
+            .horizontal {
+                height:100%;
+                width: 100%;
+            }
+            svg {
+                width:100vw;
+                height:100%;
+            }
+
+        </style>
     </head>
     <body>
+        <div class="content">
 
+            <!--Nav Bar-->
+            <div id="nav-placeholder"></div>
+            <script>$(function(){$("#nav-placeholder").load("nav.html");}); AOS.init();</script>
+
+            <!--Logo and Header-->
+                <div class="container-fluid text-center heading parallax"> 
+                    <div  style="padding-top: 8vh;"><span><i class="fas fa-water"></i>&emsp;&emsp;<i class="fas fa-water"></i>&emsp;&emsp;<i class="fas fa-water"></i>&emsp;&emsp;<i class="fas fa-water"></i>&emsp;&emsp;<i class="fas fa-water hidden-xs"></i></span></div>
+                    <div class="head-text">Your salt water connection</div>
+                    <div class="head-small-text">Tails Up offers charters, tours, lessons, summer camp, lobstering, shellfishing, and seafood for purchase</div>        
+                    <!--<svg xmlns="http://www.w3.org/2000/svg" viwebox="0 0 1200 1000">
+                        <path fill="#0099ff" fill-opacity="1" d="M0,288L80,272C160,256,320,224,480,229.3C640,235,800,277,960,272C1120,267,1280,213,1360,186.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                      </svg>-->
+                </div>
+                
+                
+                
+                <!--Border-->
+                <div class="container-fluid border"></div>
+            
+
+            <!--About Tails Up-->
+            <div class="container-fluid text-justify offerings parallax background" style="padding:5vh;">
+                <div class="row">
+                    <div class="col-sm-5" style="padding:3vw;">
+                        <img class="boat1" src="images/boat1.jpeg">
+                    </div>
+                    <div class="col-sm-7">
+                        <div style="background-color:white; border-radius:6px; padding:3vh;box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08);">
+
+                        <div class="text-center" style="font-size: 5vh; font-family:fantasy; font-weight:800;">About Tails Up</div>
+                        <div>Are you taking full advantage of Narragansett Bay and the surrounding Atlantic Ocean shoreline? Well if not, Tails Up is here to be your “Salt Water Connection.” Whether you are a novice or advanced around the salt water, we have something for you.   Rhode Island is comprised of over 400 miles of saltwater coastline and it’s a great natural resource that offers plenty to explore year round.   So don’t miss out and expedite your knowledge with our services. Explore our website and try one or more of the offerings for an experience that will last. A great customer experience is our ultimate goal, and we are always open to discussing program modifications and special requests. </div><br>
+                        <div style="font-size:2.5vh; font-style:italic;">*Fully licensed and insured.<br>*Most major credit cards accepted.</div>
+                            <br>
+                            <div class="text-center"><a href="about.html" class="btn btn-info zoom" role="button">Meet the Team</a></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            <div class="container-fluid border"></div>
+            <!--
+            <div class="container-fluid text-center parallax">
+                <div class="row">
+                    <div class="col-sm-3 service-container">
+                        <span><i class="fas fa-ship"></i></span>
+                        <p class="service-text">Charters</p>
+                        <div class="blurb" style="padding-left:5px;">Catch local May 15th through December 15th. All species are targeted.</div>
+                        <br>
+                        <a href="charters.html" class="learnmore">Learn more >></a>
+                    </div>
+                    <div class="col-sm-3 service-container">
+                        <span><i class="fas fa-fish"></i></span>
+                        <p class="service-text">Lessons</p>
+                        <div class="blurb">Learn local and improve your skills. Lessons are one on one and are offered year round.</div>
+                        <br>
+                        <a href="lessons.html" class="learnmore">Learn more >></a>
+                    </div>
+                    <div class="col-sm-3 service-container">
+                        <span><i class="fas fa-sun"></i></span>
+                        <p class="service-text">Summer Camp</p>
+                        <div class="blurb">Our summer camp for kids ages 8-16 is the most comprehensive in RI. Camp sessions take place June 15th through August 28th.</div>
+                        <br>
+                        <a href="summercamps.html" class="learnmore">Learn more >></a>
+                    </div>
+                    <div class="col-sm-3 service-container">
+                        <span><i class="fas fa-eye"></i></span>
+                        <p class="service-text">Tours</p>
+                        <div class="blurb" style="padding-right:5px;">We offer scenic, sunrise, seal, bay, lighthouse, and Newport harbor tours year round.</div>
+                        <br>
+                        <a href="tours.html" class="learnmore">Learn more >></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-3 service-container">
+                        <span><img src="images/lobster.svg" style="max-width:10vh; height:auto; padding:3vh 0vh;"></span>
+                        <p class="service-text">Lobstering</p>
+                        <div class="blurb" style="padding-left:5px;">Harvest local and learn how to trap your own from June to November.</div>
+                        <br>
+                        <a href="lobstering.html" class="learnmore">Learn more >></a>
+                    </div>
+                    <div class="col-sm-3 service-container">
+                        <span><img src="images/clam.svg" style="max-width:10vh; height:auto; padding:3vh 0vh;"></span>
+                        <p class="service-text">Shellfishing</p>
+                        <div class="blurb">Dig in and catch your own year round.</div>
+                        <br>
+                        <a href="shellfishing.html" class="learnmore">Learn more >></a>
+                    </div>
+                    <div class="col-sm-3 service-container">
+                        <span><i class="fas fa-utensils"></i></span>
+                        <p class="service-text">Seafood</p>
+                        <div class="blurb" style="padding-right:5px;">Eat local seafood that is fresh to order (same day catch to counter). Seafood is available May through December.</div>
+                        <br>
+                        <a href="seafood.html" class="learnmore">Learn more >></a>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        -->
+            
+            <!--<div class="container-fluid text-center" style="font-size: 5vh; font-family:fantasy; font-weight:800; background-color:#E2AF6E; padding:3vh;">Services We Offer</div>-->
+
+            <!--Carousel of services note data-interval=false-->
+            <div class="container-fluid text-center parallax" style="padding:0px;">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%;">
+                    <div class="carousel-inner">
+                        <div class="item active slide">
+                            <div class="row">
+                                <div class="col-sm-3 service-container service-border-right">
+                                    <span><i class="fas fa-ship"></i></span>
+                                    <p class="service-text">Charters</p>
+                                    <div class="blurb" style="padding-left:5px;">Catch local May 15th through December 15th. All species are targeted.</div>
+                                    <br>
+                                    <a href="charters.html" class="learnmore">Learn more >></a>
+                                </div>
+                                <div class="col-sm-3 service-container service-border-right service-border-left">
+                                    <span><i class="fas fa-fish"></i></span>
+                                    <p class="service-text">Lessons</p>
+                                    <div class="blurb">Learn local and improve your skills. Lessons are one on one and are offered year round.</div>
+                                    <br>
+                                    <a href="lessons.html" class="learnmore">Learn more >></a>
+                                </div>
+                                <div class="col-sm-3 service-container service-border-left service-border-right">
+                                    <span><i class="fas fa-sun"></i></span>
+                                    <p class="service-text">Summer Camp</p>
+                                    <div class="blurb">Our summer camp for kids ages 8-16 is the most comprehensive in RI. Camp sessions take place June 15th through August 28th.</div>
+                                    <br>
+                                    <a href="summercamps.html" class="learnmore">Learn more >></a>
+                                </div>
+                                <div class="col-sm-3 service-container service-border-left">
+                                    <span><i class="fas fa-eye"></i></span>
+                                    <p class="service-text">Tours</p>
+                                    <div class="blurb" style="padding-right:5px;">We offer scenic, sunrise, seal, bay, lighthouse, and Newport harbor tours year round.</div>
+                                    <br>
+                                    <a href="tours.html" class="learnmore">Learn more >></a>
+                                </div>
+                            </div>
+                            <br><br>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            
+                        </div>
+
+                        <div class="item slide">
+                            <div class="row">
+                                <div class="col-sm-4 service-container service-border-right">
+                                    <span><img src="images/lobster.svg" style="max-width:10vh; height:auto; padding:3vh 0vh;"></span>
+                                    <p class="service-text">Lobstering</p>
+                                    <div class="blurb" style="padding-left:5px;">Harvest local and learn how to trap your own from June to November.</div>
+                                    <br>
+                                    <a href="lobstering.html" class="learnmore">Learn more >></a>
+                                </div>
+                                <div class="col-sm-4 service-container service-border-right service-border-left">
+                                    <span><img src="images/clam.svg" style="max-width:10vh; height:auto; padding:3vh 0vh;"></span>
+                                    <p class="service-text">Shellfishing</p>
+                                    <div class="blurb">Dig in and catch your own year round.</div>
+                                    <br>
+                                    <a href="shellfishing.html" class="learnmore">Learn more >></a>
+                                </div>
+                                <div class="col-sm-4 service-container service-border-left">
+                                    <span><i class="fas fa-utensils"></i></span>
+                                    <p class="service-text">Seafood</p>
+                                    <div class="blurb" style="padding-right:5px;">Eat local seafood that is fresh to order (same day catch to counter). Seafood is available May through December.</div>
+                                    <br>
+                                    <a href="seafood.html" class="learnmore">Learn more >></a>
+                                </div>
+                            </div>
+                            <br><br>
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                        </div>
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        </ol>
+
+                    </div>
+                
+                     <!--Left and right controls -->
+                    
+  
+                  </div>
+
+            </div>
+
+            <div class="container-fluid border"></div>
+            <!--Pictures-->
+            <div class="container-fluid pictures parallax text-center">
+                <div class="small-heading" style="background-color:none;">Photo Gallery</div>
+                <div class="row">
+                    <div class="col-md-4 pad">
+                        <img src="images/kyle-friend-fish.jpeg" class="img-grid zoom vertical">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/remy-fish.jpeg" class="img-grid zoom vertical">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/boat2.jpeg" class="img-grid zoom vertical">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pad">
+                        <img src="images/mike-fish.jpeg" class="img-grid zoom horizontal ">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/kids-with-fish.jpeg" class="img-grid zoom horizontal">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/kyle-fish-night.jpeg" class="img-grid zoom horizontal">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pad">
+                        <img src="images/kyle-holds-fish2.jpeg" class="img-grid zoom vertical">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/mark-shark.jpeg" class="img-grid zoom vertical">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/massive-fish-kyle.jpeg" class="img-grid zoom vertical">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pad">
+                        <img src="images/shark.jpeg" class="img-grid zoom horizontal">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/lighthouse-home.jpeg" class="img-grid zoom horizontal">
+                    </div>
+                    <div class="col-md-4 pad">
+                        <img src="images/man-holding-fish.jpeg" class="img-grid zoom horizontal">
+                    </div>
+                </div>
+            </div>
+  
+
+            <div class="container-fluid text-center btm-motto">Learn local.&emsp;&emsp;Eat local.&emsp;&emsp;Catch local.</div>
+
+        </div>
+
+        
+        <div id="footer-placeholder"></div>
+        <script>$(function(){$("#footer-placeholder").load("footer.html");});</script>
     </body>
 </html>

@@ -1,0 +1,125 @@
+<style>
+    .navbar-default {
+        border-color: #185D7A;
+        border-radius: 0px;
+        background-color: #185D7A;
+        width: 100%;
+        margin: 0px;
+        padding: 20px;
+    }
+    .navbar-default .navbar-nav > li {
+        padding:5px;
+        padding-top: 10px;
+    }
+    .navbar-default .navbar-nav >li > a {
+        color: white;
+        padding: 0px 15px;
+        font-weight:bold;
+        font-size: 2vh;
+    }
+    .navbar-default .navbar-nav >li > a:hover,
+    .navbar-default .navbar-nav >li > a:focus {
+        color: lightgrey;
+    }
+    .navbar-default .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-default .navbar-nav  > li {
+        float: none;
+        display: inline-block;
+    }
+    .head {
+        position:relative;
+        top:0;
+        left:0;
+    }
+    .background-img {
+        position:relative;
+        top:0;
+        left:0;
+        width:100%;
+        height:20vw;
+        opacity:0.4;
+    }
+    .image {
+        position:absolute;
+    }
+    /*
+    @media (min-width: 768px) and (max-width: 1300px) {
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+        .navbar-toggle{
+                display: block !important;
+        }
+        .navbar-header{
+                float: none;
+        }
+    }*/
+
+    @media (max-width:945px) {
+        .image {
+            width:260px;
+            height:180px;
+            top:0px;
+        }
+    }
+    @media (min-width: 946px) {
+        .image {
+            width:260px;
+            height:180px;
+            top:0px;
+        }
+    }
+    @media (min-width:1500px) {
+        .image {
+            width:300px;
+            height:220px;
+            top:5px;
+        }
+    }
+
+
+ 
+</style>
+<!--
+<div class="container-fluid" style="padding:0px;">
+    <div class="head">
+        <img class="background-img" src="images/net1.png">
+        <img class="logo" src="images/placeholder.png">
+        <div class="left-text">email</div>
+        <div class="right-text">phone</div> 
+    </div>
+</div>
+<div class="container-fluid border"></div>
+-->
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img class="image" style="z-index: 2;" src="images/BrhAPfug.png"></a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav" style="padding-left:35vh;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charters.html">Charters</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="summercamps.html">Summer Camp</a></li>
+                <li><a href="lobstering.html">Lobstering</a></li>
+                <li><a href="shellfishing.html">Shellfishing</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="seafood.html">Seafood</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
